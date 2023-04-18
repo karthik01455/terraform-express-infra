@@ -1,0 +1,11 @@
+datasource db {
+  provider = "postgresql"
+  url = "postgresql://postgres:password@localhost:5432/ap_db"
+}
+generator client {
+  provider = "prisma-client-js"
+}
+model Color {
+  id    Int     @id @default(autoincrement())
+  name  String
+}
