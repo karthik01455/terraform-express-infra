@@ -32,7 +32,15 @@ app.get('/colors', async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
-
+// Endpoint to print hello world
+app.get('/helloworld', async (req, res) => {
+  try {
+    console.log('Hello World');
+    res.json('Hello World');
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
 // Start the server
 app.listen(3000, () => {
   console.log('Server listening on port 3000');
