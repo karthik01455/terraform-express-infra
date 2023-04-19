@@ -1,8 +1,10 @@
 const express = require('express');
 const { PrismaClient } = require('@prisma/client');
-
+const cors = require('cors');
 const app = express();
+app.use(cors)
 const prisma = new PrismaClient();
+
 
 // Endpoint to add a color to the database
 app.use(express.json());
