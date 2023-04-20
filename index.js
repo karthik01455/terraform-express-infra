@@ -33,10 +33,18 @@ app.get('/colors', async (req, res) => {
   }
 });
 // Endpoint to print hello world
-app.get('/helloworld', async (req, res) => {
+app.get('/user', async (req, res) => {
   try {
-    console.log('Hello World');
-    res.json('Hello World');
+    console.log('user');
+    res.json('user');
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+app.get('/user/profile', async (req, res) => {
+  try {
+    console.log('user');
+    res.json('user');
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
